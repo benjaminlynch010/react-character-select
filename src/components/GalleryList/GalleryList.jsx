@@ -1,6 +1,6 @@
-import GalleryItem from "../GalleryItem/GalleryItem";
+import GalleryItem from "../GalleryItem/GalleryItem.jsx";
 
-function GalleryList({ galleryItems }) {
+function GalleryList({ galleryItems, updateLikes }) {
   console.log('gallery items', galleryItems)
   return (
     <section>
@@ -8,7 +8,7 @@ function GalleryList({ galleryItems }) {
         <GalleryItem 
         key={item.id}
         item={item}
-        addLike={addLike}
+        updateLikes={updateLikes}
         />
       ))}
     </section>

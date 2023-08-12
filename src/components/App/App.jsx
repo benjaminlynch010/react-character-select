@@ -22,26 +22,24 @@ function App() {
       .then((response) => {
         setGalleryItems(response.data)
       })
-      .catch((err) => {
+      .catch((error) => {
         alert(`Cannot retrieve gallery. Try again later.`)
-        console.log(`GET error | ${err}`)
+        console.log(`GET error | ${error}`)
       })
 }
 
   // function for like button
-  const addLike = (item) => {
-    item.likes += 1;
-
-    axios.put(`/inventory/${id}`, {likes: item.likes})
-      .then((response) => {
-        getGallery()
-      })
-      .catch((error) => {
-        alert(`Cannot update likes. Try again later.`)
-        console.log(`PUT Error | ${error}`)
-      })
+  const updateLikes = (item) => {
+    axios
+      .put(`/gallery/like/${item.id}`)
+        .then((response) => {
+          getGallery();
+        })
+        .catch((error) => {
+          alert(`Cannot add like.  Try again later.`)
+          console.log(`PUT Error | ${error}`)
+        })
   }
-
 
 
     return (
@@ -52,8 +50,9 @@ function App() {
         <main>
           <GalleryList 
             galleryItems={galleryItems}
-            addLike={addLike}
+            updateLikes={updateLikes}
           />
+
         </main>
           
       </div>
