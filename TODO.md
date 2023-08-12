@@ -16,13 +16,13 @@
   - [] click handler to toggle between img & desc.
   - [] button to like an img
 
-- [] axios GET route to retrieve data from /gallery
+- [X] axios GET route to retrieve data from /gallery
 >GET route in App.jsx?
 - [] store data in App.jsx
 
 - [] GalleryList.jsx
-  - [] pass gallery data stored in App - use props
-  - [] iterate the list of gallery data
+  - [X] pass gallery data stored in App - use props
+  - [X] iterate the list of gallery data
   - [] make GalleryItems
 
 - [] GalleryItem.jsx

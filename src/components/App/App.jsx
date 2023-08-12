@@ -14,9 +14,7 @@ function App() {
   useEffect(() => {
     getGallery();
   }, []);
-
-  // Pass GalleryItems data via props
-
+  
   // Get data from server-side
   const getGallery = () => {
     axios
@@ -24,13 +22,24 @@ function App() {
       .then((response) => {
         setGalleryItems(response.data)
       })
-      .catch((err) => {
+      .catch((error) => {
         alert(`Cannot retrieve gallery. Try again later.`)
-        console.log(`GET error | ${err}`)
+        console.log(`GET error | ${error}`)
       })
+}
+
+  // function for like button
+  const updateLikes = (item) => {
+    axios
+      .put(`/gallery/like/${item.id}`)
+        .then((response) => {
+          getGallery();
+        })
+        .catch((error) => {
+          alert(`Cannot add like.  Try again later.`)
+          console.log(`PUT Error | ${error}`)
+        })
   }
-
-
 
 
     return (
@@ -41,7 +50,9 @@ function App() {
         <main>
           <GalleryList 
             galleryItems={galleryItems}
+            updateLikes={updateLikes}
           />
+
         </main>
           
       </div>
