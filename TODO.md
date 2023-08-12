@@ -2,7 +2,7 @@
 
 ### Setup
 - Server side GET & PUT provided
-- [] Add some imagesto public/images
+- [] Add some images to public/images
 - [] Modify `server/modules/data.js` to include:
   - id
   - title
