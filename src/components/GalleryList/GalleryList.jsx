@@ -8,6 +8,7 @@ function GalleryList({ galleryItems }) {
         <GalleryItem 
         key={item.id}
         item={item}
+        addLike={addLike}
         />
       ))}
     </section>
