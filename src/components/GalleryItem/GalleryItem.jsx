@@ -11,3 +11,4 @@ function GalleryItem({ item, updateLikes }) {
 }
 
 export default GalleryItem;
+

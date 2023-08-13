@@ -52,9 +52,7 @@ function App() {
             galleryItems={galleryItems}
             updateLikes={updateLikes}
           />
-
         </main>
-          
       </div>
     );
 }
