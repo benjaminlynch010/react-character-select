@@ -11,7 +11,7 @@ function GalleryItem({ item, updateLikes }) {
 
   return (
     <>
-    <div key={item.id} onClick={toggleImage}>
+    <div className="flip-btn" key={item.id} onClick={toggleImage}>
       {flip ? <img src={item.path} />  : <p>{item.description} </p>}
     </div>
 

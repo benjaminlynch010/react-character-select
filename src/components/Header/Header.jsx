@@ -1,8 +1,7 @@
-function Header(props) {
-  console.log(`Header props : ${props}`)
+function Header() {
   return (
     <>
-      <h1>{props.title}</h1>
+      <h1>Choose Your Character!</h1>
     </>
   )
 }
