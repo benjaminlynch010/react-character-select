@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import React from 'react';
 import axios from 'axios'
 import './App.css';
-
 import GalleryList from '../GalleryList/GalleryList';
 import Header from '../Header/Header.jsx'
+
 
 function App() {
 
@@ -46,10 +46,7 @@ function App() {
 
     return (
       <div className="App">
-        <Header myProp={'YAY'} isCool={true} title={"Hello Props!"} />
-        {/* <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
-        </header> */}
+        <Header />
         <main>
           <GalleryList 
             galleryItems={galleryItems}
