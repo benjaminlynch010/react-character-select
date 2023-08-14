@@ -3,6 +3,7 @@ import React from 'react';
 import axios from 'axios'
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
+import Header from '../Header/Header.jsx'
 
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
@@ -164,6 +165,7 @@ function App() {
 }
 
   // function for like button
+  // pass item from GalleryItem
   const updateLikes = (item) => {
     axios
       .put(`/gallery/like/${item.id}`)
@@ -179,17 +181,16 @@ function App() {
 
     return (
       <div className="App">
-        <header className="App-header">
+        <Header myProp={'YAY'} isCool={true} title={"Hello Props!"} />
+        {/* <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
-        </header>
+        </header> */}
         <main>
           <GalleryList 
             galleryItems={galleryItems}
             updateLikes={updateLikes}
           />
-
         </main>
-          
       </div>
     );
 }
