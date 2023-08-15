@@ -23,7 +23,7 @@ router.put('/like/:id', (req, res) => {
 // GET Route
 router.get('/', (req, res) => {
   // Get all of the students from the database
-  const sqlText = `SELECT * FROM gallery`;
+  const sqlText = `SELECT * FROM gallery ORDER BY "id" ASC`;
   pool.query(sqlText)
       .then((result) => {
           res.send(result.rows);
