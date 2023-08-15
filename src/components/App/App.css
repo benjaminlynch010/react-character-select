@@ -1,18 +1,11 @@
 .App {
   text-align: center;
-  display: inline;
+  color: whitesmoke;
+  font-size: 1.25em;
+  font-family: 'Roboto', 'SF Pro', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-header {
-  background-color: #222;
-  padding: 1em;
-  color: white;
-  margin-bottom: 1em;
-}
 
-.App-title {
-  font-size: 1.5em;
-}
 
 
 

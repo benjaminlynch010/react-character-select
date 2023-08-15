@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container'
 
 function GalleryItem({ item, updateLikes }) {
 
@@ -11,12 +13,14 @@ function GalleryItem({ item, updateLikes }) {
 
   return (
     <>
-    <div className="flip-btn" key={item.id} onClick={toggleImage}>
-      {flip ? <img src={item.path} />  : <p>{item.description} </p>}
-    </div>
+    <Container variant="outlined" key={item.id} onClick={toggleImage}>
+      {flip ? 
+        <img src={item.path} style={{ height: 150}} />  
+        : <p >{item.description} </p>}
+    </Container>
 
     <div>
-    <button onClick={() => updateLikes(item)}>Like</button>
+    <Button variant="contained" onClick={() => updateLikes(item)}>Like</Button>
     <p>{item.likes}</p>
     </div>
   </>
