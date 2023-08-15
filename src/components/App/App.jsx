@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import React from 'react';
 import axios from 'axios'
+
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
-import Header from '../Header/Header.jsx'
-
+import Header from '../Header/Header'
 
 function App() {
 
