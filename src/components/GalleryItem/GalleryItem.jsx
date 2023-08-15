@@ -16,7 +16,11 @@ function GalleryItem({ item, updateLikes }) {
     <Container variant="outlined" key={item.id} onClick={toggleImage}>
       {flip ? 
         <img src={item.path} style={{ height: 150}} />  
-        : <p >{item.description} </p>}
+        : 
+        <Container 
+          sx={{height: 150, display: "flex", alignContent: "center", justifyContent: "center", alignItems: "center" }}
+          >{item.description}
+        </Container>}
     </Container>
 
     <div>
