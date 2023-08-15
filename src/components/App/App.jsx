@@ -2,6 +2,11 @@ import { useState, useEffect } from 'react'
 import React from 'react';
 import axios from 'axios'
 
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
 import Header from '../Header/Header'

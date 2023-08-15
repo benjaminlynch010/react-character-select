@@ -13,7 +13,7 @@ function GalleryItem({ item, updateLikes }) {
 
   return (
     <>
-    <Container variant="contained" key={item.id} onClick={toggleImage}>
+    <Container variant="outlined" key={item.id} onClick={toggleImage}>
       {flip ? 
         <img src={item.path} style={{ height: 150}} />  
         : <p >{item.description} </p>}
